@@ -1,5 +1,7 @@
-//import styles from './ColumnForm.module.scss';
+import styles from './ColumnForm.module.scss';
 import { useState } from 'react';
+import Button from '../Button/Button'
+import TextInput from "../TextInput/TextInput"
 
 const ColumnForm = props => {
 const [title, setTitle] = useState('');
@@ -13,10 +15,14 @@ const handleSubmit = e => {
 };
 
 	return (
-    <form onSubmit={handleSubmit}>
-    Title: <input type="text" value={title} onChange={e => setTitle(e.target.value)} />
-    Icon: <input type="text" value={icon} onChange={e => setIcon(e.target.value)} />
-    <button>Add column</button>
+    <form className={styles.columnForm} onSubmit={handleSubmit}>
+    Title:
+    <div className={styles.style}>
+      <TextInput value={title} onChange={(e) => setTitle(e.target.value)} /></div>
+    Icon: <div className={styles.style}>
+      <TextInput value={icon} onChange={(e) => setIcon(e.target.value)} /></div>
+    <div className={styles.style}>
+      <Button>Add column</Button></div>
 </form>
 	);
 };
