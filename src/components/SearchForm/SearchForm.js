@@ -4,15 +4,14 @@ import Button from '../Button/Button'
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 
-const SearchForm = () => {
+const SearchForm = props => {
 
   const [searchValue, setValue] = useState('');
   const dispatch = useDispatch();
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch({ type: 'UPDATE_SEARCHSTRING', payload: {searchValue }});
+    dispatch({ type: 'UPDATE_SEARCHSTRING', payload: searchValue });
     setValue('');
-
   };
 
   return (
