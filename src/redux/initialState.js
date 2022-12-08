@@ -28,4 +28,7 @@ const initialState = {
 
 };
 
+const searchString = '';
+
+
 export default initialState;
