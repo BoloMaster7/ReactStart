@@ -1,0 +1,35 @@
+@import '../../styles/settings.scss';
+
+
+.navbar {
+  background-color: darken($color-dark, 3%);
+  //margin-top: -20px;
+}
+
+.navigation {
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  color: $color-light;
+}
+.navigation .icon {
+    margin-top: 20px;
+    font-size: 24px;
+    padding: 20px;
+}
+.navigation a {
+  color: $color-light;
+  text-decoration: none;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation li {
+
+  padding: 20px;
+}
+
