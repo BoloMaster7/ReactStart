@@ -12,7 +12,7 @@ const SearchForm = props => {
   const handleSubmit = e => {
     e.preventDefault();
    // dispatch({ type: 'UPDATE_SEARCHSTRING', payload: searchValue });
-    dispatch(updateSearchString({ searchValue}));
+    dispatch(updateSearchString( searchValue));
     setValue('');
   };
 
