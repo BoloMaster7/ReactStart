@@ -29,7 +29,10 @@
 }
 
 .navigation li {
-
   padding: 20px;
+}
+
+.navigation .linkActive{
+  color: $color-warning;
 }
 
