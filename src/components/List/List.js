@@ -3,13 +3,17 @@ import Column from './../Column/Column';
 import ColumnForm from './../ColumnForm/ColumnForm';
 import { useSelector } from 'react-redux';
 import { getListById} from '../../redux/store';
-import { getAllColumns} from '../../redux/store';
+import { getColumnsByList} from '../../redux/store';
+import { useParams } from 'react-router';
 
 
 const List = () => {
-  const columns = useSelector(getAllColumns);
+  // const columns = useSelector(getAllColumns);
+  const { listId } = useParams();
+  const listData = useSelector(state => getListById(state, listId))
+  const columns = useSelector(state => getColumnsByList(state, listId));
 
-  const listData = useSelector((state) => getListById(state, 1))
+ 
 
   return (
     <div className={styles.list}>
@@ -28,7 +32,7 @@ const List = () => {
             {...column}  />
         )}
       </section>
-      <ColumnForm />
+      <ColumnForm listId={listId} />
     </div>
   );
 };
