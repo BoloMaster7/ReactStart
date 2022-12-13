@@ -30,7 +30,7 @@ export const updateSearchString = payload => ({ type: 'UPDATE_SEARCHSTRING', pay
 
 export const addList = payload => ({ type: 'ADD_LIST', payload });
 
-export const toggleCardFavorite = payload=>  ({ type: 'toggleCardFavorite', payload });
+export const toggleCardFavorite = payload=>  ({ type: 'TOGGLE_CARD_FAVORITE', payload });
 
 
 const reducer = (state, action) => {
