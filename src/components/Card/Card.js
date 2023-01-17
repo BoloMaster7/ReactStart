@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './Card.module.scss';
 import clsx from 'clsx';
 import { useState } from 'react';
@@ -25,7 +26,7 @@ const Card = (props) => {
         onClick={handleClick}
         className={clsx(styles.button, props.isFavorite &&
           styles.isActive)}>
-        <i className={"fa-star-o"} />
+        <i className={"fa fa-star-o"} />
       </button>
     </li>
   );

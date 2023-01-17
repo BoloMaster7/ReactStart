@@ -1,3 +1,4 @@
+import React from 'react';
 import Hero from '../Hero/Hero'
 import Lists from '../Lists/Lists'
 

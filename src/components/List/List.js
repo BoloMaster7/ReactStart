@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './List.module.scss';
 import Column from './../Column/Column';
 import ColumnForm from './../ColumnForm/ColumnForm';

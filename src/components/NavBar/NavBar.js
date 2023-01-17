@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './NavBar.module.scss';
 import Container from '../Container/Container';
 import { Link } from 'react-router-dom';
